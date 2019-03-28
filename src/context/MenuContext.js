@@ -22,4 +22,4 @@ function MenuProvider({ children }) {
     )
 }
 
-export { MenuProvider, Consumer as MenuConsumer }
+export { MenuProvider, Consumer as MenuConsumer, MenuContext }
