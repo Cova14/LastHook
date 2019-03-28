@@ -1,12 +1,12 @@
 import React from 'react'
 import { Menu, Icon } from 'antd'
-import MenuContext from '../context/MenuContext'
+import { MenuConsumer } from '../context/MenuContext'
 let SubMenu = Menu.SubMenu
 
 export default function Nav({ }) {
     return (
         <div>
-            <MenuContext.Consumer>
+            <MenuConsumer>
                 {({ openMenu }) => (
                     <Menu mode="horizontal" theme="dark" >
                         <Menu.Item
@@ -24,7 +24,7 @@ export default function Nav({ }) {
                         </SubMenu>
                     </Menu>
                 )}
-            </MenuContext.Consumer>
+            </MenuConsumer>
         </div>
     )
 }

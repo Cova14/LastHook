@@ -1,11 +1,11 @@
 import React from 'react'
 import { Drawer } from 'antd'
-import MenuContext from '../context/MenuContext'
+import { MenuConsumer } from '../context/MenuContext'
 
 export default function Menu({ }) {
     return (
         <div>
-            <MenuContext.Consumer>
+            <MenuConsumer>
                 {({ closeMenu, show }) => (
                     <Drawer
                         title="Basic Drawer"
@@ -19,7 +19,7 @@ export default function Menu({ }) {
                         <p>Some contents...</p>
                     </Drawer>
                 )}
-            </MenuContext.Consumer>
+            </MenuConsumer>
         </div>
     )
 }
